@@ -1,6 +1,26 @@
 <?php
+/*
+    Automatically compile less files to css.
+    Disable this in production environment.
+    Check vendor/rrcom/rrcom-less-module
+    */
 return array(
     'rrcomlessmodule' => array(
+        // enable or disable auto compiling (must be disable in production environment to reduce processing time)
         'enable' => true,
+        // the files to compile and theirs output directory
+        'files' => array(
+            array(
+                // .less source directory 1
+                'less-file' => './public/less/sample1.less',
+                // .css output directory 1
+                'css-file' => './public/css/sample1.css',
+            ),array(
+                // .less source directory 2
+                'less-file' => './public/less/sample2.less',
+                // .css output directory 2
+                'css-file' => './public/css/sample2.css',
+            ),
+        ),
     ),
 );
