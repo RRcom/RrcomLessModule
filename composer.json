@@ -1,0 +1,32 @@
+{
+    "name":        "rrcom/rrcom-less-module",
+    "description": "CSS LESS compiler module for Zend Framework 2",
+    "type":        "library",
+    "license":     "MIT",
+    "homepage":    "https://github.com/RRcom/RrcomLessModule",
+    "keywords":    [
+        "rrcom",
+        "less",
+        "css",
+        "module",
+        "zf2"
+    ],
+    "authors":     [
+        {
+            "name": "Restituto Rizal",
+            "email": "resty_rizal@live.com",
+            "homepage": "https://github.com/RRcom",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "leafo/lessphp": "0.4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "RrcomLessModule\\": "src/"
+        }
+    }
+}
