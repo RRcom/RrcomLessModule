@@ -2,7 +2,7 @@
 namespace RrcomLessModule;
 
 use Zend\Mvc\MvcEvent;
-use lessc;
+use RrcomLessCompiler\LessCompiler;
 
 class Module
 {
@@ -18,12 +18,7 @@ class Module
 
     public function writeToFile()
     {
-        $lessc = new lessc();
-        if(empty($this->config['files'])) return;
-        foreach($this->config['files'] as $file) {
-            if(!empty($file['less-file']) && is_file($file['less-file'])) {
-                $lessc->compileFile($file['less-file'], $file['css-file']);
-            }
-        }
+        $lessCompiler = new LessCompiler();
+        return $lessCompiler->compile($this->config);
     }
 }
