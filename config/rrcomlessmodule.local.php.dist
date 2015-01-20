@@ -15,11 +15,21 @@ return array(
                 'less-file' => './public/less/sample1.less',
                 // .css output directory 1
                 'css-file' => './public/css/sample1.css',
-            ),array(
+                /*
+                * Set formatter
+                * lessjs (default) — Same style used in LESS for JavaScript
+                * compressed — Compresses all the unrequired whitespace
+                * classic — lessphp’s original formatter
+                */
+                'formatter' => 'compressed',
+            ),
+            array(
                 // .less source directory 2
                 'less-file' => './public/less/sample2.less',
                 // .css output directory 2
                 'css-file' => './public/css/sample2.css',
+                // Set formatter
+                'formatter' => 'compressed',
             ),
         ),
     ),
