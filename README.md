@@ -12,6 +12,7 @@ How to use
 4. populate "rrcomlessmodule.local.php" with this example value
 
 ```php
+<?php
 return array(
     'rrcomlessmodule' => array(
         // enable or disable auto compiling (must be disable in production environment to reduce processing time)
